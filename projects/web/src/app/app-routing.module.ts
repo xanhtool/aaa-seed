@@ -8,19 +8,27 @@ const routes: Routes = [
   // { path: 'home', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) },
 
   // { path: 'invitation', loadChildren: () => import('./pages/invitation/invitation.module').then(m => m.InvitationModule) },
-  { path: '', pathMatch: 'full', redirectTo: '/home' },
+  { path: '', pathMatch: 'full', redirectTo: '/books' },
   { path: '**', redirectTo: '' }
 ];
 
 const desktopRoutes: Routes = [
   // { path: ':detail', loadChildren: () => import('./pages/detail/detail.module').then(m => m.DetailModule), data: { preload: true }, },
   // { path: 'home', loadChildren: () => import('./pages/detail/detail.module').then(m => m.DetailModule), data: { preload: true }, },
+  {
+    path: 'books',
+    loadChildren: () => import('./views/mobile/views/mobile-books/mobile-books.module').then(m => m.MobileBooksModule)
+  },
   ...routes
 ];
 
 const mobileRoutes: Routes = [
   // { path: ':detail', loadChildren: () => import('./pages/mobile-detail/mobile-detail.module').then(m => m.MobileDetailModule), data: { preload: true }, },
   // { path: 'home', loadChildren: () => import('./pages/mobile-detail/mobile-detail.module').then(m => m.MobileDetailModule), data: { preload: true }, },
+  {
+    path: 'books',
+    loadChildren: () => import('./views/mobile/views/mobile-books/mobile-books.module').then(m => m.MobileBooksModule)
+  },
   ...routes
 ];
 
