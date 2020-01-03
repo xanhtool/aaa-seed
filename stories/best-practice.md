@@ -55,6 +55,7 @@ Here's our logo (hover to see the title text):
 | Views Module                      |  import shared module              |  
 
 # Smart and dumb components
+![image info](./images/module.png)
 - Smart Components (aka Containers). These components usually:
   - have facade/s and other services injected,
   - communicate with the core layer,
@@ -66,7 +67,7 @@ Here's our logo (hover to see the title text):
   - Their only responsibilities are to present UI element and to delegate user interaction “up” to the smart components via events
   - That element does not have any particular logic implemented
   
-## For Dumb Components
+## For Smart Components
 
 | Module File                      | Explain                             |
 | ----------------------------------| ---------------------------------- | 
