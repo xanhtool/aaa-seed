@@ -17,7 +17,7 @@ const desktopRoutes: Routes = [
   // { path: 'home', loadChildren: () => import('./pages/detail/detail.module').then(m => m.DetailModule), data: { preload: true }, },
   {
     path: 'books',
-    loadChildren: () => import('./views/mobile/views/mobile-books/mobile-books.module').then(m => m.MobileBooksModule)
+    loadChildren: () => import('./views/desktop/views/books/books.module').then(m => m.BooksModule)
   },
   ...routes
 ];
@@ -27,7 +27,7 @@ const mobileRoutes: Routes = [
   // { path: 'home', loadChildren: () => import('./pages/mobile-detail/mobile-detail.module').then(m => m.MobileDetailModule), data: { preload: true }, },
   {
     path: 'books',
-    loadChildren: () => import('./views/mobile/views/mobile-books/mobile-books.module').then(m => m.MobileBooksModule)
+    loadChildren: () => import('./views/mobile/views/books/books.module').then(m => m.BooksModule)
   },
   ...routes
 ];
